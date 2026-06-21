@@ -24,10 +24,10 @@ jobs:
           dotnet-version: '10.0.x'
           
       - name: Clean
-        run: dotnet clean --configuration Release
+        run: dotnet clean src/TravelGenApi.csproj --configuration Release
     
       - name: Build
-        run: dotnet build --configuration Release
+        run: dotnet build src/TravelGenApi.csproj --configuration Release
         
   test-project:
     name: 'Test Project'
@@ -43,7 +43,7 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Test
-        run: dotnet test --configuration Release --collect:"XPlat Code Coverage"
+        run: dotnet test src/TravelGenApi.csproj --configuration Release --collect:"XPlat Code Coverage"
 
   create-pull-request-master:
     name: 'Create Pull Request'

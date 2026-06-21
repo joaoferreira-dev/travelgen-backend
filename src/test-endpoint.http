@@ -1,0 +1,16 @@
+### Health Check
+GET http://localhost:5000/travelgen-api/v1/healthy-check
+
+### Generate Trip
+POST http://localhost:5000/travelgen-api/v1/itinerary/generate
+Content-Type: application/json
+
+{
+  "destination": "Roma",
+  "days": 3,
+  "budget": 1500.0,
+  "interests": [
+    "culture",
+    "food"
+  ]
+}
